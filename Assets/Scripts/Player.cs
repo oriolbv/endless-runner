@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary> 
+/// Responsible for moving the player automatically and  
+/// reciving input. 
+/// </summary> 
 [RequireComponent(typeof(Rigidbody))] 
 public class Player : MonoBehaviour
 {
