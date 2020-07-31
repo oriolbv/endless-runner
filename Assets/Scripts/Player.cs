@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody rb; 
-    public float dodgeSpeed = 5; 
+    [Header("Components")]
+    private Rigidbody rb;
+    
+    [Header("Physics")]
+    [Range(0, 10)] 
+    public float dodgeSpeed = 5;
+    [Range(0, 10)] 
     public float rollSpeed = 5; 
 
    // Use this for initialization 
