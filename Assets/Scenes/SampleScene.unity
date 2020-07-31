@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dodgeSpeed: 5
-  rollSpeed: 5
+  rollSpeed: 3
 --- !u!54 &202298501
 Rigidbody:
   m_ObjectHideFlags: 0

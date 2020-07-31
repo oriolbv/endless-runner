@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))] 
 public class Player : MonoBehaviour
 {
     [Header("Components")]
     private Rigidbody rb;
     
     [Header("Physics")]
+    [Tooltip("How fast the ball moves left/right")] 
     [Range(0, 10)] 
     public float dodgeSpeed = 5;
+    [Tooltip("How fast the ball moves forwards automatically")] 
     [Range(0, 10)] 
     public float rollSpeed = 5; 
 
