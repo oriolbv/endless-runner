@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour
     [Range(1, 15)]
     public int initSpawnNum = 10;
 
+    public int initNoObstacles = 4;
+
     private Vector3 nextTileLocation;
 
     private Quaternion nextTileRotation;
@@ -26,11 +28,11 @@ public class GameController : MonoBehaviour
 
         for (int i = 0; i < initSpawnNum; ++i)
         {
-            SpawnNextTile();
+            SpawnNextTile(i >= initNoObstacles);
         }
     }
 
-    public void SpawnNextTile()
+    public void SpawnNextTile(bool spawnObstacles = true)
     {
         var newTile = Instantiate(tile, nextTileLocation, 
                                   nextTileRotation);
@@ -39,5 +41,38 @@ public class GameController : MonoBehaviour
         var nextTile = newTile.Find("SpawnPoint");
         nextTileLocation = nextTile.position;
         nextTileRotation = nextTile.rotation;
+    
+        if (!spawnObstacles)
+            return;
+
+        // Now we need to get all of the possible places to spawn the obstacle 
+        var obstacleSpawnPoints = new List<GameObject>();
+
+        // Go through each of the child game objects in our tile 
+        foreach (Transform child in newTile)
+        {
+            // If it has the ObstacleSpawn tag 
+            if (child.CompareTag("ObstacleSpawn"))
+            {
+                // We add it as a possibilty 
+                obstacleSpawnPoints.Add(child.gameObject);
+            }
+        }
+
+        // Make sure there is at least one 
+        if (obstacleSpawnPoints.Count > 0)
+        {
+            // Get a random object from the ones we have 
+            var spawnPoint = obstacleSpawnPoints[Random.Range(0, obstacleSpawnPoints.Count)];
+
+            // Store its position for us to use 
+            var spawnPos = spawnPoint.transform.position;
+
+            // Create our obstacle 
+            var newObstacle = Instantiate(Obstacle, spawnPos, Quaternion.identity);
+
+            // Have it parented to the tile
+            newObstacle.SetParent(spawnPoint.transform);
+        }
     }
 }
