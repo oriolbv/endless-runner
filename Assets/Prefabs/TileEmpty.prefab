@@ -103,6 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 66512712043837195}
   - component: {fileID: 66512712043837192}
+  - component: {fileID: 7424390656649977679}
   m_Layer: 0
   m_Name: TileEnd
   m_TagString: Untagged
@@ -137,6 +138,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7424390656649977679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66512712043837193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7bf636d3b39e543b360700a0848994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 1.5
 --- !u!1 &66512712168572400
 GameObject:
   m_ObjectHideFlags: 0
