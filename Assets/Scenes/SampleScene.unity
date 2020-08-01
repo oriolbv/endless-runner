@@ -210,7 +210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202298495}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 31.4, z: -7.6}
+  m_LocalPosition: {x: 0, y: 10.5, z: -7.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
@@ -229,8 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d79f1d652892d4eb2f35a0567c5400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dodgeSpeed: 5
-  rollSpeed: 6.3
+  dodgeSpeed: 10
+  rollSpeed: 8
 --- !u!54 &202298501
 Rigidbody:
   m_ObjectHideFlags: 0
