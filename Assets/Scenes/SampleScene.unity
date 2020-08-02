@@ -360,6 +360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 66512712429176321, guid: 77702540ff429814ba803a46e6e15fc2, type: 3}
+  obstacle: {fileID: 8636068125250718414, guid: 398178968e4c4914fa8d280ade139e80,
+    type: 3}
   startPoint: {x: 0, y: 0, z: -5}
   initSpawnNum: 10
   initNoObstacles: 4

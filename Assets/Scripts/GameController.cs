@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
     [Tooltip("A reference to the tile we want to spawn")]
     public Transform tile;
 
+    public Transform obstacle;
+
     [Tooltip("First tile position")]
     public Vector3 startPoint = new Vector3(0, 0, -5);
 
@@ -69,7 +71,7 @@ public class GameController : MonoBehaviour
             var spawnPos = spawnPoint.transform.position;
 
             // Create our obstacle 
-            var newObstacle = Instantiate(Obstacle, spawnPos, Quaternion.identity);
+            var newObstacle = Instantiate(obstacle, spawnPos, Quaternion.identity);
 
             // Have it parented to the tile
             newObstacle.SetParent(spawnPoint.transform);
