@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenu : MainMenu
 {
-    private static bool paused; 
+    public static bool paused; 
  
     [Tooltip("Reference to the pause menu object to turn on/off")] 
     public GameObject pauseMenu; 

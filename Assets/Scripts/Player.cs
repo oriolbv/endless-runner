@@ -29,6 +29,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        
+        // Check if game is paused
+        if (PauseMenu.paused)
+            return;
+
         // Movement in the x axis 
         float horizontalSpeed = 0;
 
@@ -59,7 +64,13 @@ public class Player : MonoBehaviour
 #endif
 
         // Apply our auto-moving and movement forces 
-        rb.AddForce(horizontalSpeed, 0, rollSpeed);
+        var movementForce = new Vector3(horizontalSpeed, 0, rollSpeed); 
+ 
+        // Time.deltaTime is the amount of time since the last frame (approx. 1/60 seconds) 
+        movementForce *= (Time.deltaTime * 60); 
+ 
+        // Apply our auto-moving and movement forces 
+        rb.AddForce(movementForce); 
     }
 
     /// <summary> 
