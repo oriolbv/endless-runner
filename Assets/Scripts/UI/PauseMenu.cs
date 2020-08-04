@@ -34,5 +34,6 @@ public class PauseMenu : MonoBehaviour
     void Start() 
     { 
         paused = false; 
+        SetPauseMenu(false);
     } 
 }
