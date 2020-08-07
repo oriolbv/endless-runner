@@ -36,4 +36,11 @@ public class PauseMenu : MainMenu
         paused = false; 
         SetPauseMenu(false);
     } 
+
+    void Update() {
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            SetPauseMenu(true);
+        }
+    }
 }
