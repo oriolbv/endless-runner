@@ -756,10 +756,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 7bc2b503-b6e8-4549-8327-7d445d1e2c00
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Endless Runner
+  organizationId: oriol-burgaya
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
